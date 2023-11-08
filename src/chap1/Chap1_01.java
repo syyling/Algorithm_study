@@ -1,7 +1,7 @@
 package chap1;
 
 import java.util.*;
-class Chap1_1{
+class Chap1_01{
     public int solution(String str, char t) {
         int answer = 0;
         str = str.toUpperCase();
@@ -16,7 +16,7 @@ class Chap1_1{
 
     public static void main(String[] args){
 
-        Chap1_1 T = new Chap1_1();
+        Chap1_01 T = new Chap1_01();
         Scanner kb = new Scanner(System.in);
         String str = kb.next();
         char c = kb.next().charAt(0);
