@@ -2,7 +2,7 @@ package chap1;
 
 import java.util.Scanner;
 
-public class Chap1_8 {
+public class Chap1_08 {
 
     public String solution(String str) {
         String answer = "NO";
@@ -18,7 +18,7 @@ public class Chap1_8 {
     }
 
     public static void main(String[] args) {
-        Chap1_8 T = new Chap1_8();
+        Chap1_08 T = new Chap1_08();
         Scanner kb = new Scanner(System.in);
         String str = kb.nextLine();
         System.out.println(T.solution(str));
