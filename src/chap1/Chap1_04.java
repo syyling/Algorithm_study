@@ -3,7 +3,7 @@ package chap1;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Chap1_4 {
+public class Chap1_04 {
 
     public ArrayList<String> solution(int num, String[] str) {
         ArrayList<String> answer = new ArrayList<>();
@@ -48,7 +48,7 @@ public class Chap1_4 {
     }
 
     public static void main(String[] args) {
-        Chap1_4 T = new Chap1_4();
+        Chap1_04 T = new Chap1_04();
         Scanner kb = new Scanner(System.in);
         int num = kb.nextInt();
 
