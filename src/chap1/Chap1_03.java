@@ -2,8 +2,7 @@ package chap1;
 
 import java.util.Scanner;
 
-public class Chap1_3 {
-
+public class Chap1_03 {
 
     public String solution(String str) {
         String answer = "";
@@ -42,7 +41,7 @@ public class Chap1_3 {
      */
 
     public static void main(String[] args) {
-        Chap1_3 T = new Chap1_3();
+        Chap1_03 T = new Chap1_03();
         Scanner kb = new Scanner(System.in);
         String str = kb.nextLine(); //한줄로 입력받음
         System.out.println(T.solution(str));
