@@ -1,10 +1,8 @@
 package chap1;
 
-import com.sun.tools.javac.Main;
-
 import java.util.Scanner;
 
-public class Chap1_7 {
+public class Chap1_07 {
 
     public String solution(String str) {
         String answer = "";
@@ -28,7 +26,7 @@ public class Chap1_7 {
     }
 
     public static void main(String[] args) {
-        Chap1_7 T = new Chap1_7();
+        Chap1_07 T = new Chap1_07();
         Scanner kb = new Scanner(System.in);
         String str = kb.next();
         System.out.println(T.solution(str));
