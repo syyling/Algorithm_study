@@ -3,7 +3,7 @@ package chap1;
 import java.util.Scanner;
 
 //indexOf: 문자열의 처음 위치에서 특정 문자열의 index를 찾는다.
-public class Chap1_6 {
+public class Chap1_06 {
 
     public String solution(String str) {
         String answer = "";
@@ -16,7 +16,7 @@ public class Chap1_6 {
     }
 
     public static void main(String[] args) {
-        Chap1_6 T = new Chap1_6();
+        Chap1_06 T = new Chap1_06();
         Scanner kb = new Scanner(System.in);
         String str = kb.next();
         System.out.println(T.solution(str));
