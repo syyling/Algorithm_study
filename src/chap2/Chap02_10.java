@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Chap02_10 {
 
     /* 대각선 방향도 확인해야할 경우 if문 8개는 비효율적
+    배열 선언할때 +2 씩 해야함
     public int solution(int n, int[][] arr) {
         int answer = 0;
         for(int i=1; i<=n; i++) {
