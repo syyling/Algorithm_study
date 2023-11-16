@@ -7,13 +7,9 @@ public class Chap2_01 {
 
     public ArrayList<Integer> solution(int n, int[] arr) {
         ArrayList<Integer> answer = new ArrayList<Integer>();
-        int x = arr[0];
-        answer.add(x);
+        answer.add(arr[0]);
         for(int i=1; i<n; i++) {
-            if(x<arr[i]) {
-                answer.add(arr[i]);
-            }
-            x = arr[i];
+            if(arr[i-1]<arr[i]) answer.add(arr[i]);
         }
         return answer;
     }
