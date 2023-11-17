@@ -18,14 +18,27 @@ public class Chap3_03 {
      */
 
     public int solution(int n, int m, int[] a) {
-        int answer = 0, tmp = 0;
+        int answer = 0, sum = 0;
         for(int i=0; i<m; i++) {
-            tmp += a[i];
+            sum += a[i];
         }
-        answer = tmp;
+        answer = sum;
         for(int i=0; i<n-m; i++) {
-            tmp = tmp - a[i] + a[m+i];
-            if(answer<tmp) answer = tmp;
+            sum = sum - a[i] + a[m+i];
+            if(answer<sum) answer = sum;
+        }
+        return answer;
+    }
+
+    public int solution2(int n, int m, int[] a) {
+        int answer = 0, sum = 0;
+        for(int i=0; i<m; i++) {
+            sum += a[i];
+        }
+        answer = sum;
+        for(int i=m; i<n; i++) {
+            sum = sum + a[i] - a[i-m];
+            if(answer<sum) answer = sum;
         }
         return answer;
     }
@@ -39,6 +52,6 @@ public class Chap3_03 {
         for(int i=0; i<n; i++) {
             a[i] = kb.nextInt();
         }
-        System.out.println(T.solution(n,m,a));
+        System.out.println(T.solution2(n,m,a));
     }
 }
