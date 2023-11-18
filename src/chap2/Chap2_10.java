@@ -2,7 +2,7 @@ package chap2;
 
 import java.util.Scanner;
 
-public class Chap02_10 {
+public class Chap2_10 {
 
     /* 대각선 방향도 확인해야할 경우 if문 8개는 비효율적
     배열 선언할때 +2 씩 해야함
@@ -42,7 +42,7 @@ public class Chap02_10 {
     }
 
     public static void main(String[] args) {
-        Chap02_10 T = new Chap02_10();
+        Chap2_10 T = new Chap2_10();
         Scanner kb = new Scanner(System.in);
         int n = kb.nextInt();
         int[][] arr = new int[n][n];
