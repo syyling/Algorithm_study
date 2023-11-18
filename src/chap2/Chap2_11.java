@@ -2,7 +2,7 @@ package chap2;
 
 import java.util.Scanner;
 
-public class Chap02_11 {
+public class Chap2_11 {
 
     /* 제일 처음 쓴 답
     public int solution(int n, int[][] arr) {
@@ -75,7 +75,7 @@ public class Chap02_11 {
 
 
     public static void main(String[] args) {
-        Chap02_11 T = new Chap02_11();
+        Chap2_11 T = new Chap2_11();
         Scanner kb = new Scanner(System.in);
         int n = kb.nextInt();
         int[][] arr = new int[n+1][6];
