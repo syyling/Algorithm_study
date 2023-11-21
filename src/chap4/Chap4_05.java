@@ -1,37 +1,37 @@
 package chap4;
 
-import java.util.HashMap;
-import java.util.Scanner;
+import java.util.*;
 
 public class Chap4_05 {
 
-    public int solution(String s1, String s2) {
-        int answer = 0, lt = 0;
-        HashMap<Character, Integer> am = new HashMap<>();
-        HashMap<Character, Integer> bm = new HashMap<>();
-        for(char x: s2.toCharArray()) {
-            bm.put(x, bm.getOrDefault(x, 0)+1);
+    //TreeSet 이용 - 정렬, 중복제거, 검색에 유리
+    public Integer solution(int n, int k, int[] arr){
+        int answer = -1; //k번째 수가 존재하지 않으면 -1 출력
+        TreeSet<Integer> Tset = new TreeSet<>(Collections.reverseOrder()); //내림차순
+        for(int i=0; i<n; i++) {
+            for(int j=i+1; j<n; j++) {
+                for(int s=j+1; s<n; s++) {
+                    Tset.add(arr[i] + arr[j] + arr[s]);
+                }
+            }
         }
-        int L = s2.length()-1;
-        for(int i=0; i<L; i++) {
-            am.put(s1.charAt(i), am.getOrDefault(s1.charAt(i), 0)+1);
-        }
-        for(int rt=L; rt<s1.length(); rt++) {
-            am.put(s1.charAt(rt), am.getOrDefault(s1.charAt(rt), 0)+1);
-            if(am.equals(bm)) answer++;
-            am.put(s1.charAt(lt), am.get(s1.charAt(lt))-1);
-            if(am.get(s1.charAt(lt))==0) am.remove(s1.charAt(lt));
-            lt++;
+        int cnt = 0;
+        for(int x: Tset) {
+            cnt++;
+            if(cnt==k) return x;
         }
         return answer;
-
     }
 
     public static void main(String[] args) {
-        Chap4_05 T= new Chap4_05();
+        Chap4_05 T = new Chap4_05();
         Scanner kb = new Scanner(System.in);
-        String s1 = kb.next();
-        String s2 = kb.next();
-        System.out.println(T.solution(s1, s2));
+        int n = kb.nextInt();
+        int k = kb.nextInt();
+        int[] arr = new int[n];
+        for(int i=0; i<n; i++) {
+            arr[i] = kb.nextInt();
+        }
+        System.out.println(T.solution(n, k ,arr));
     }
 }
