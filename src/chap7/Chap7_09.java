@@ -1,6 +1,5 @@
 package chap7;
 
-import backjoon.Main;
 
 public class Chap7_09 {
 
