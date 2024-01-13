@@ -7,6 +7,8 @@ public class Chap7_13 {
 
     static int n, m, answer=0;
     static int[] ch;
+
+    //Integer를 저장하는 ArrayList를 저장하는 ArrayList
     static ArrayList<ArrayList<Integer>> graph;
 
     public void DFS(int v) {
@@ -23,7 +25,7 @@ public class Chap7_13 {
     }
 
     public static void main(String[] args) {
-        Chap7_12 T = new Chap7_12();
+        Chap7_13 T = new Chap7_13();
         Scanner kb = new Scanner(System.in);
         n = kb.nextInt();
         m = kb.nextInt();
