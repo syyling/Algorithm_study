@@ -20,7 +20,6 @@ class Meeting implements Comparable<Meeting>{
 
 public class Chap9_02 {
 
-
     public static void main(String[] args) {
         Scanner kb = new Scanner(System.in);
         int n = kb.nextInt();
@@ -32,12 +31,11 @@ public class Chap9_02 {
         int time = arr[0].end;
         int answer = 1;
         for(int i=1;i<n; i++) {
-            if(time==arr[i].start) {
+            if(time<=arr[i].start) {
                 time = arr[i].end;
                 answer++;
             }
         }
         System.out.println(answer);
     }
-    
 }
